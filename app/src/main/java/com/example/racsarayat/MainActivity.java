@@ -1,6 +1,7 @@
 package com.example.racsarayat;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mAmrBtn;
     private TextView mResetPass;
     private FirebaseAuth mAuth;
-
+    private FirebaseUser CurrentUser;
     /**
      * verifyStaticCredentials: Verify the mail and password to be sent to the backend.
      *
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseUser CurrentUser = mAuth.getCurrentUser();
+        CurrentUser = mAuth.getCurrentUser();
     }
 
     @Override
@@ -69,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
         mAmrBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO(1): Determine where to go from here.
 
+                String url = "https://www.linkedin.com/in/amrkh97/";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
 
             }
         });
@@ -100,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
                                         // Sign in success, update UI with the signed-in user's information
                                         Toast.makeText(MainActivity.this, "Authentication Successful.",
                                                 Toast.LENGTH_SHORT).show();
-                                        FirebaseUser user = mAuth.getCurrentUser();
 
-                                        Intent myIntent = new Intent(MainActivity.this, FeedActivity.class);
+                                        Intent myIntent = new Intent(MainActivity.this, ProfileActivity.class);
                                         startActivity(myIntent);
+
 
                                     } else {
                                         // If sign in fails, display a message to the user.

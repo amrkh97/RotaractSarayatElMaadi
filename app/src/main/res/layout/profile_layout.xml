@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="172dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="110dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="668dp" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginEnd="115dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_previous_position"
+        android:layout_width="407dp"
+        android:layout_height="331dp"
+        android:layout_below="@+id/tv_user_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="7dp" />
+
+    <TextView
+        android:id="@+id/tv_previous_positions"
+        android:layout_width="141dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="337dp"
+        android:text="Previous Positions:"
+        android:textSize="16sp" />
 
 </RelativeLayout>

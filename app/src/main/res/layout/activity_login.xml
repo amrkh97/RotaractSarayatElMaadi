@@ -10,7 +10,7 @@
         android:layout_height="181dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="62dp"
         android:background="@drawable/rotaract"
         android:scaleType="fitCenter" />
@@ -19,8 +19,9 @@
     <LinearLayout
         android:id="@+id/RestOfLogin"
         android:layout_width="match_parent"
-        android:layout_height="418dp"
-        android:layout_marginTop="250dp"
+        android:layout_height="332dp"
+        android:layout_alignTop="@+id/ellipse"
+        android:layout_marginTop="234dp"
         android:background="@android:color/white"
         android:orientation="vertical">
 
@@ -102,7 +103,8 @@
         android:layout_below="@+id/RestOfLogin"
         android:layout_alignParentStart="true"
         android:layout_gravity="bottom"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="62dp"
         android:background="#d61a69"
         android:text="Made by @amrkh97"
         android:textAlignment="center"
