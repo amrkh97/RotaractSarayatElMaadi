@@ -3,5 +3,6 @@
     <string name="SignIn">Sign In</string>
     <string name="LogoDescription">Logo of Rotaract Sarayat El-Maadi</string>
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
-
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

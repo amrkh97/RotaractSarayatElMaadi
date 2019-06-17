@@ -1,7 +1,5 @@
 package com.example.racsarayat;
 
-import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,9 +22,6 @@ public class PreviousPositionModel {
         // Deserialize json into object fields
         try {
             DummyUser.User_Position = jsonObject.getString("Position");
-            Log.d("AMR", "Position: " + DummyUser.User_Position);
-            Log.d("AMR", "Year: " + DummyUser.Position_Year);
-
             DummyUser.Position_Year = jsonObject.getString("Year");
 
         } catch (JSONException e) {
